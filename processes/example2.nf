@@ -1,3 +1,5 @@
+nextflow.enable.dsl = 2
+
 params.compress = 'gzip'
 params.file2compress = "$projectDir/data/ggal/transcriptome.fa"
 

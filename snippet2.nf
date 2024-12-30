@@ -1,4 +1,6 @@
 // https://training.nextflow.io/basic_training/channels/#value-channels
+nextflow.enable.dsl = 2
+
 ch1 = Channel.of(1, 2, 3)
 ch2 = Channel.value(1)
 // Channel

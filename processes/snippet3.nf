@@ -1,3 +1,5 @@
+nextflow.enable.dsl = 2
+
 reads = Channel.fromPath('*.csv')
 reads.view()
 process FOO {
