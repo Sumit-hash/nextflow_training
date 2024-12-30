@@ -1,5 +1,5 @@
 nextflow.enable.dsl=2
-reads_ch = Channel.fromFilePairs('data/*_{1,2}.fq')
+reads_ch = Channel.fromFilePairs('*_{1,2}.csv')
 reads_ch.view()
 
 process FOO {
@@ -11,12 +11,12 @@ process FOO {
 
     script:
     """
-    echo your_command_here --sample $sample_id_paths > sample.bam
+    echo "your_command_here --sample $sample_id_paths" > sample.bam
     """
 }
 
 workflow {
     sample_ch = FOO(reads_ch)
     sample_ch.view()
-    sample_ch.out.view()
+    // sample_ch.out.view()
 }
