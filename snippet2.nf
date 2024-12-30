@@ -15,6 +15,10 @@ Channel
 Channel
     .fromPath('./*.csv')
     .view()
+
+Channel
+    .fromFilePairs('./*_{1,2}.csv')
+    .view()
 // process SUM {
 //     input:
 //     val x
